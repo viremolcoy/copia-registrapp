@@ -1,0 +1,48 @@
+ion-content {
+    --background: #f4f4f4;
+
+
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    color: black;
+  
+    ion-img {
+      width: 80px; /* Ajusta el tamaño del logo según sea necesario */
+      height: 80px;
+      margin-right: 10px; /* Espacio entre el logo y el texto */
+    }
+  
+    h2 {
+      margin: 0; /* Elimina el margen del encabezado para un diseño más compacto */
+    }
+  }
+  
+  .user-info {
+    margin-top: 20px;
+    margin-left: 20px;
+    color: black;
+  }
+  
+  .center {
+    text-align: center;
+  }
+  
+  ion-header{
+    --background: #ffd000;
+  
+    ion-toolbar{
+      --background: #ffd000;
+      color: black;
+    }
+  }
+
+
+  ion-back-button{
+    color: black;
+  }
+

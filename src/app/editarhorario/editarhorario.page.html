@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-back-button>Atras</ion-back-button>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>
+      Editar Horario
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="editForm" (ngSubmit)="saveClass()">
+    <ion-item>
+      <ion-label placeholder="-">Día</ion-label>
+      <ion-select formControlName="day">
+        <ion-select-option value="lunes">lunes</ion-select-option>
+        <ion-select-option value="martes">martes</ion-select-option>
+        <ion-select-option value="miércoles">miércoles</ion-select-option>
+        <ion-select-option value="jueves">Jueves</ion-select-option>
+        <ion-select-option value="viernes">viernes</ion-select-option>
+        <ion-select-option value="sábado">sábado</ion-select-option>
+        <ion-select-option value="domingo">domingo</ion-select-option>
+        <!-- Agrega las opciones para los demás días -->
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label placeholder="-">Nombre de la Asignatura</ion-label>
+      <ion-select formControlName="subjectName">
+        <ion-select-option value="Programación Móvil | PGY4121">Programación Móvil | PGY4121 <br> Sección: 002D</ion-select-option>
+        <ion-select-option value="Estadística Descriptiva | MAT4140">Estadística Descriptiva | MAT4140 <br> Sección: 002D</ion-select-option>
+        <ion-select-option value="Calidad de Software | CSY4111">Calidad de Software | CSY4111 <br> Sección: 002D</ion-select-option>
+        <ion-select-option value="Arquitectura | ASY4131">Arquitectura | ASY4131 <br> ㅤㅤㅤSección: 002D</ion-select-option>
+        <ion-select-option value="Ética para el Trabajo | EAY4450">Ética para el Trabajo | EAY4450 <br> Sección: 002D</ion-select-option>
+        <ion-select-option value="Ingles Intermedio | INI5111">Ingles Intermedio | INI5111 <br> Sección: 002D</ion-select-option>
+        <ion-select-option value="Proceso de Portafolio | APY4461">Proceso de Portafolio | APY4461 <br> Sección: 002D</ion-select-option>
+        <!-- Agrega las opciones para las demás asignaturas -->
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Hora de Inicio</ion-label>
+      <ion-input type="time" formControlName="startTime"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Hora de Termino</ion-label>
+      <ion-input type="time" formControlName="endTime"></ion-input>
+    </ion-item>
+
+    <ion-button type="submit" class="btn center-button">Guardar</ion-button>
+  </form>
+</ion-content>

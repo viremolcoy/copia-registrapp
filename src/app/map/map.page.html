@@ -1,0 +1,25 @@
+
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Duoc Uc Puerto Montt</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Duoc Uc</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <google-map width="800" height="600" [center]="position">
+    <map-marker 
+    [position]="position" 
+    [label]="label"
+    [title]="title"
+    >
+
+    </map-marker>
+  </google-map>
+  
+</ion-content>

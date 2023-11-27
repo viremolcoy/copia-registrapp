@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-back-button>Atras</ion-back-button>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>
+      Scan QR
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div id="container">
+    <div>
+      <video id="video" width="80%" height="200px"></video>
+    </div>
+    <ion-button (click)="scan()">Escanear QR</ion-button>
+  </div>
+</ion-content>

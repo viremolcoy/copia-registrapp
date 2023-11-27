@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-back-button>Atras</ion-back-button>
+      </ion-button>
+    </ion-buttons>
+    <ion-title class="center">AYUDA</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>¿Como puedo justificar una inasistencia?</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Ingresa a <a href="https://experienciavivo.duoc.cl/alumnos"> https://experienciavivo.duoc.cl/alumnos</a> y selecciona la opcion solicitud en línea.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Donde queda DuocUC sede Pueto Montt</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Esta es la direccion de DuocUC sede Puerto montt <br> <br>
+      <google-map width="285" height="200" [center]="position">
+        <map-marker 
+        [position]="position" 
+        [label]="label"
+        [title]="title"
+        >
+    
+        </map-marker>
+      </google-map>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Tengo problemas para registrar mi asistencia, ¿Con quien debo comunicarme?</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Envia un mensaje comentando tu situación al siguiente correo electronico: helpregistrapp@gmail.com
+    </ion-card-content>
+  </ion-card>
+</ion-content>

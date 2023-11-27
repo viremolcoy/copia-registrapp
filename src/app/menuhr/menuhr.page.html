@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" id="btn-9">
+      <ion-button id="btn-9">
+        <ion-back-button></ion-back-button>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>
+      Mi Horario
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngFor="let day of weekDays">
+    <ion-item (click)="toggleClasses(day)">
+      {{ day }}
+      <ion-icon slot="end" [name]="isDaySelected(day) ? 'arrow-up' : 'arrow-down'"></ion-icon>
+    </ion-item>
+    <ion-list *ngIf="isDaySelected(day)">
+      <ion-item *ngFor="let class of getClassesByDay(day)" id="ola">
+        {{ class.subjectName }} <br>
+        {{ class.startTime }} - {{ class.endTime }}
+        <ion-buttons slot="end">
+          <ion-button color="danger" (click)="deleteClass(day, class)">Eliminar</ion-button>
+        </ion-buttons>
+      </ion-item>
+    </ion-list>
+  </ion-list>
+  <ion-button routerLink="/editarhorario" class="btn center-button">Agregar clase</ion-button>
+</ion-content>
+
+

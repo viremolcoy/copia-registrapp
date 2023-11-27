@@ -1,0 +1,23 @@
+ion-header, ion-toolbar{
+    --background: #ffd000;
+    text-align: center;
+
+
+    ion-title{
+        color: black;
+    }
+}
+
+ion-content{
+    --background: rgb(229, 241, 255); 
+
+    ion-item{
+        --background: rgb(229, 241, 255);
+        text-align: start;
+
+        ion-icon, ion-label{
+            color: black;
+            padding: 25px;
+        }
+    }
+}

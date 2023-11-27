@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-back-button>Atras</ion-back-button>
+      </ion-button>
+    </ion-buttons>
+    <ion-title class="center">Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+    <ion-content class="ion-padding">
+      <div class="logo-container">
+        <ion-img src="./assets/images/perfil.jpg" alt="Logo Duoc UC"></ion-img>
+        <h2>Instituto Profesional <br> Duoc UC</h2>
+      </div>
+
+    <div class="user-info">
+            <h1>{{ usuario.nombre }} {{ usuario.apellido }}</h1>
+            <p>RUT: {{ usuario.rut }}</p>
+            <p>Email: {{ usuario.email }}</p>
+          </div>
+</ion-content>

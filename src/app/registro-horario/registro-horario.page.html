@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-back-button>Atras</ion-back-button>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>
+      Registro <br> Asistencia
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card>
+    <ion-list *ngIf="claseSeleccionada">
+      <ion-item>
+        <ion-label>Clase</ion-label>
+        <p>{{ claseSeleccionada.subjectName }}</p>
+      </ion-item>
+      <ion-item>
+        <ion-label>Hora Inicio</ion-label>
+        <p>{{ claseSeleccionada.startTime }}</p>
+      </ion-item>
+      <ion-item>
+        <ion-label>Hora Término</ion-label>
+        <p>{{ claseSeleccionada.endTime }}</p>
+      </ion-item>
+    </ion-list>
+    <ion-button size="small" expand="full" (click)="generarRegistro()">Generar registro</ion-button>
+    <!-- Mostrar los valores generados -->
+    <ion-list>
+      <ion-item>
+        <ion-label>Dia</ion-label>
+        <ion-badge color="warning">{{dia}}</ion-badge>
+      </ion-item>
+      <ion-item>
+        <ion-label>Mes</ion-label>
+        <ion-badge color="warning">{{mes}}</ion-badge>
+      </ion-item>
+      <ion-item>
+        <ion-label>Año</ion-label>
+        <ion-badge color="warning">{{ano}}</ion-badge>
+      </ion-item>
+      <ion-item>
+        <ion-label>Hora</ion-label>
+        <ion-badge color="warning">{{hora}}</ion-badge>
+      </ion-item>
+    </ion-list>
+
+
+    <ion-button id="open-toast" expand="full" (click)="guardarRegistro()">Guardar Registro</ion-button>
+</ion-card>
+</ion-content>

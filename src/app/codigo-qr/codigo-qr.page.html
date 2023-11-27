@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-back-button>Atras</ion-back-button>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>
+      Registro <br> Asistencia
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h2>{{ fecha }}</h2>
+  <br>
+  <h4>Clase:</h4>
+  <p>{{ claseSeleccionada.subjectName }}</p>
+  <h4>Hora de inicio:</h4>
+  <p>{{ claseSeleccionada.startTime }}</p>
+  <h4>Hora de término:</h4>
+  <p>{{ claseSeleccionada.endTime }}</p>
+  
+  <!-- Botón para mostrar el código QR -->
+  <ion-button expand="full" (click)="mostrarCodigoQR()">Mostrar Código QR</ion-button>
+
+  <!-- Contenedor del código QR con clase condicional para mostrarlo -->
+  <div class="codigo-qr-container" *ngIf="mostrarCodigoQRFlag">
+    <qrcode [qrdata]="qrCodeString" [width]="256" [errorCorrectionLevel]="'M'"></qrcode>
+    <ion-button expand="full" (click)="ocultarCodigoQR()">Ocultar Código QR</ion-button>
+  </div>
+
+  <ion-button expand="full" (click)="mostrarCantidadEstudiantes()">Mostrar Estudiantes</ion-button>
+  <ion-item *ngIf="alumnosRegistrados !== null">
+    <ion-label>
+      CONTADOR DE ESTUDIANTES
+    </ion-label>
+    <ion-note slot="end">{{ alumnosRegistrados }}</ion-note>
+  </ion-item>
+  <ion-item *ngFor="let nombre of nombresAleatorios; let i = index">
+    <ion-label>
+      {{ i + 1 }}) {{ nombre }}
+    </ion-label>
+  </ion-item>
+  <ion-button expand="full" (click)="guardarAsistencia()">Guardar Asistencia</ion-button>
+</ion-content>
+
+

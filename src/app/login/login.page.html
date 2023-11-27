@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar color="warning">
+      <ion-buttons slot="start">
+        <ion-button>
+          <ion-back-button>Atras</ion-back-button>
+        </ion-button>
+      </ion-buttons>
+    <ion-title>DuocUC</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <h1>Iniciar Sesión</h1>
+    </ion-card-header>
+    <ion-card-content>
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input [(ngModel)]="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input type="password" [(ngModel)]="password"></ion-input>
+    </ion-item>
+    <ion-button id="btn-1" expand="full" color="white" (click)="resetPassword()">Olvidé mi contraseña</ion-button>
+    <ion-button expand="full" (click)="loginUser()">Iniciar Sesión</ion-button>
+    <ion-button expand="full" color="medium" (click)="irInicio()"  id="btn-2">Ir al inicio</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

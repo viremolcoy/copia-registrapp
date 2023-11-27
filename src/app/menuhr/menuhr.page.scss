@@ -1,0 +1,38 @@
+ion-header{
+    ion-toolbar, ion-item{
+      --background: #ffd000;
+      background: #ffd000;
+      padding: 0 20px;
+      color: black;
+    }
+}
+
+ion-content{
+    --background: rgb(255, 255, 255);
+    --padding-top: 5%;
+
+
+    ion-item{
+        --background: rgb(255, 255, 255);
+        color: black;
+    }
+}
+
+#ola{
+    --background: #e7e7e7;
+}
+
+.center-button {
+    display: block;
+    margin: 0 auto;
+    padding: 20px 30%;
+  }
+
+
+  ion-back-button{
+    color: black;
+  }
+
+#btn-9{
+  color: black;
+}

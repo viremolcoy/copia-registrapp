@@ -1,0 +1,38 @@
+ion-content {
+  --background: #ffffff; // Color de fondo del contenido
+
+  ion-card {
+    margin-bottom: 20px; // Espacio entre las cards
+    background-color: rgb(153, 255, 190);;
+  }
+
+  ion-card-title {
+    font-size: 1.4em; // Tamaño del título de la card
+    font-weight: bold; // Negrita
+    color: rgb(30, 105, 59);
+  }
+  
+  ion-card-content {
+    font-size: 1.1em; // Tamaño del texto de la card
+    color: #10664e;
+  }
+
+  // Clase personalizada para centrar texto
+  .center {
+    text-align: center;
+  }
+}
+
+ion-header{
+  --background: #ffd000;
+
+  ion-toolbar{
+    --background: #ffd000;
+    color: black;
+  }
+}
+
+
+ion-back-button{
+  color: black;
+}
